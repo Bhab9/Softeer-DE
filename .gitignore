@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# venv
+w1m2/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# SQLite
+*.db
