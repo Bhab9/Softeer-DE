@@ -3,6 +3,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import re
+import json
 
 # logging function
 def log_message(message):
@@ -95,26 +96,43 @@ def transform_system(df: pd.DataFrame, caption: str) -> pd.DataFrame:
 
     # Country name cleaning (remove [])
     df['Country'] = df['Country'].apply(lambda x: re.sub(r"\[.*?\]", "", x).strip())
+    log_message("DEBUG: clean Country name")
 
     # remove ',' and convert to float
     df['GDP'] = df['GDP'].str.replace(',','').str.strip()
     # NaN data process
     df['GDP'] = pd.to_numeric(df['GDP'], errors='coerce')
     df = df.dropna(subset=['GDP'])
+    log_message("DEBUG: convert to float and remove NaN")
     
     # million to billion
     caption_lower = caption.lower() if caption else ""
     if "million" in caption_lower:
+        log_message("DEBUG: unit-million")
         df['GDP_USD_billion'] = (df['GDP'] / 1000).round(2)
     elif "billion" in caption_lower:
+        log_message("DEBUG: unit-billion")
         df['GDP_USD_billion'] = df['GDP'].round(2)
     else:
+        log_message("DEBUG: unit-none")
         df['GDP_USD_billion'] = (df['GDP'] / 1000000).round(2)
 
     df = df.sort_values(by='GDP_USD_billion', ascending=False).reset_index(drop=True)
     log_message("INFO: Transform finished")
     
     return df[['Country', 'GDP_USD_billion']]
+
+def load_system(df: pd.DataFrame, json_path: str):
+    """
+    Load data into database
+    """
+    log_message("INFO: Load started")
+
+    data_to_save = df.to_dict(orient="records")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+
+    log_message(f"INFO: Load finished, saved to {json_path}")
 
 if __name__ ==  "__main__":
     url =  "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
@@ -126,3 +144,6 @@ if __name__ ==  "__main__":
     df_transformed = transform_system(df_raw, caption)
     print("Transformed data preview: ")
     print(df_transformed.head())
+
+    json_path = "Countries_by_GDP.json"
+    load_system(df_transformed, json_path)

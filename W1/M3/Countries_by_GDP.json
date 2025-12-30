@@ -1,0 +1,854 @@
+[
+    {
+        "Country": "United States",
+        "GDP_USD_billion": 31821.29
+    },
+    {
+        "Country": "China",
+        "GDP_USD_billion": 20650.75
+    },
+    {
+        "Country": "Germany",
+        "GDP_USD_billion": 5328.18
+    },
+    {
+        "Country": "India",
+        "GDP_USD_billion": 4506.74
+    },
+    {
+        "Country": "Japan",
+        "GDP_USD_billion": 4463.63
+    },
+    {
+        "Country": "United Kingdom",
+        "GDP_USD_billion": 4225.64
+    },
+    {
+        "Country": "France",
+        "GDP_USD_billion": 3558.56
+    },
+    {
+        "Country": "Italy",
+        "GDP_USD_billion": 2701.54
+    },
+    {
+        "Country": "Russia",
+        "GDP_USD_billion": 2545.42
+    },
+    {
+        "Country": "Canada",
+        "GDP_USD_billion": 2420.84
+    },
+    {
+        "Country": "Brazil",
+        "GDP_USD_billion": 2292.69
+    },
+    {
+        "Country": "Spain",
+        "GDP_USD_billion": 2041.83
+    },
+    {
+        "Country": "Mexico",
+        "GDP_USD_billion": 2031.02
+    },
+    {
+        "Country": "Australia",
+        "GDP_USD_billion": 1948.23
+    },
+    {
+        "Country": "South Korea",
+        "GDP_USD_billion": 1936.62
+    },
+    {
+        "Country": "Turkey",
+        "GDP_USD_billion": 1576.11
+    },
+    {
+        "Country": "Indonesia",
+        "GDP_USD_billion": 1550.24
+    },
+    {
+        "Country": "Netherlands",
+        "GDP_USD_billion": 1413.08
+    },
+    {
+        "Country": "Saudi Arabia",
+        "GDP_USD_billion": 1316.25
+    },
+    {
+        "Country": "Poland",
+        "GDP_USD_billion": 1109.96
+    },
+    {
+        "Country": "Switzerland",
+        "GDP_USD_billion": 1074.59
+    },
+    {
+        "Country": "Taiwan",
+        "GDP_USD_billion": 971.45
+    },
+    {
+        "Country": "Belgium",
+        "GDP_USD_billion": 761.17
+    },
+    {
+        "Country": "Ireland",
+        "GDP_USD_billion": 750.11
+    },
+    {
+        "Country": "Sweden",
+        "GDP_USD_billion": 711.5
+    },
+    {
+        "Country": "Argentina",
+        "GDP_USD_billion": 685.54
+    },
+    {
+        "Country": "Israel",
+        "GDP_USD_billion": 666.41
+    },
+    {
+        "Country": "Singapore",
+        "GDP_USD_billion": 606.22
+    },
+    {
+        "Country": "Austria",
+        "GDP_USD_billion": 604.2
+    },
+    {
+        "Country": "United Arab Emirates",
+        "GDP_USD_billion": 601.16
+    },
+    {
+        "Country": "Thailand",
+        "GDP_USD_billion": 561.51
+    },
+    {
+        "Country": "Norway",
+        "GDP_USD_billion": 547.69
+    },
+    {
+        "Country": "Philippines",
+        "GDP_USD_billion": 533.92
+    },
+    {
+        "Country": "Vietnam",
+        "GDP_USD_billion": 511.06
+    },
+    {
+        "Country": "Malaysia",
+        "GDP_USD_billion": 505.36
+    },
+    {
+        "Country": "Denmark",
+        "GDP_USD_billion": 500.05
+    },
+    {
+        "Country": "Bangladesh",
+        "GDP_USD_billion": 477.33
+    },
+    {
+        "Country": "Pakistan",
+        "GDP_USD_billion": 468.8
+    },
+    {
+        "Country": "Colombia",
+        "GDP_USD_billion": 462.25
+    },
+    {
+        "Country": "Hong Kong",
+        "GDP_USD_billion": 446.65
+    },
+    {
+        "Country": "Romania",
+        "GDP_USD_billion": 444.81
+    },
+    {
+        "Country": "South Africa",
+        "GDP_USD_billion": 443.64
+    },
+    {
+        "Country": "Czech Republic",
+        "GDP_USD_billion": 417.13
+    },
+    {
+        "Country": "Egypt",
+        "GDP_USD_billion": 401.51
+    },
+    {
+        "Country": "Iran",
+        "GDP_USD_billion": 375.64
+    },
+    {
+        "Country": "Portugal",
+        "GDP_USD_billion": 364.53
+    },
+    {
+        "Country": "Chile",
+        "GDP_USD_billion": 363.3
+    },
+    {
+        "Country": "Finland",
+        "GDP_USD_billion": 335.53
+    },
+    {
+        "Country": "Nigeria",
+        "GDP_USD_billion": 334.34
+    },
+    {
+        "Country": "Peru",
+        "GDP_USD_billion": 326.61
+    },
+    {
+        "Country": "Kazakhstan",
+        "GDP_USD_billion": 319.77
+    },
+    {
+        "Country": "Greece",
+        "GDP_USD_billion": 304.84
+    },
+    {
+        "Country": "Algeria",
+        "GDP_USD_billion": 294.4
+    },
+    {
+        "Country": "New Zealand",
+        "GDP_USD_billion": 280.55
+    },
+    {
+        "Country": "Iraq",
+        "GDP_USD_billion": 273.91
+    },
+    {
+        "Country": "Hungary",
+        "GDP_USD_billion": 269.92
+    },
+    {
+        "Country": "Qatar",
+        "GDP_USD_billion": 239.14
+    },
+    {
+        "Country": "Ukraine",
+        "GDP_USD_billion": 224.26
+    },
+    {
+        "Country": "Cuba",
+        "GDP_USD_billion": 201.99
+    },
+    {
+        "Country": "Kuwait",
+        "GDP_USD_billion": 163.71
+    },
+    {
+        "Country": "Ethiopia",
+        "GDP_USD_billion": 159.75
+    },
+    {
+        "Country": "Morocco",
+        "GDP_USD_billion": 144.44
+    },
+    {
+        "Country": "Venezuela",
+        "GDP_USD_billion": 139.4
+    },
+    {
+        "Country": "Slovakia",
+        "GDP_USD_billion": 132.91
+    },
+    {
+        "Country": "Dominican Republic",
+        "GDP_USD_billion": 121.44
+    },
+    {
+        "Country": "Ecuador",
+        "GDP_USD_billion": 118.84
+    },
+    {
+        "Country": "Puerto Rico",
+        "GDP_USD_billion": 117.9
+    },
+    {
+        "Country": "Kenya",
+        "GDP_USD_billion": 108.04
+    },
+    {
+        "Country": "Oman",
+        "GDP_USD_billion": 105.9
+    },
+    {
+        "Country": "Guatemala",
+        "GDP_USD_billion": 104.45
+    },
+    {
+        "Country": "Bulgaria",
+        "GDP_USD_billion": 102.4
+    },
+    {
+        "Country": "Uzbekistan",
+        "GDP_USD_billion": 90.89
+    },
+    {
+        "Country": "Angola",
+        "GDP_USD_billion": 90.55
+    },
+    {
+        "Country": "Costa Rica",
+        "GDP_USD_billion": 86.5
+    },
+    {
+        "Country": "Luxembourg",
+        "GDP_USD_billion": 85.76
+    },
+    {
+        "Country": "Croatia",
+        "GDP_USD_billion": 84.39
+    },
+    {
+        "Country": "Sri Lanka",
+        "GDP_USD_billion": 84.36
+    },
+    {
+        "Country": "Panama",
+        "GDP_USD_billion": 83.38
+    },
+    {
+        "Country": "Lithuania",
+        "GDP_USD_billion": 79.79
+    },
+    {
+        "Country": "Ivory Coast",
+        "GDP_USD_billion": 78.79
+    },
+    {
+        "Country": "Tanzania",
+        "GDP_USD_billion": 78.35
+    },
+    {
+        "Country": "Uruguay",
+        "GDP_USD_billion": 77.24
+    },
+    {
+        "Country": "Ghana",
+        "GDP_USD_billion": 76.37
+    },
+    {
+        "Country": "Serbia",
+        "GDP_USD_billion": 75.19
+    },
+    {
+        "Country": "Azerbaijan",
+        "GDP_USD_billion": 72.36
+    },
+    {
+        "Country": "Belarus",
+        "GDP_USD_billion": 71.86
+    },
+    {
+        "Country": "DR Congo",
+        "GDP_USD_billion": 69.34
+    },
+    {
+        "Country": "Slovenia",
+        "GDP_USD_billion": 69.15
+    },
+    {
+        "Country": "Myanmar",
+        "GDP_USD_billion": 62.08
+    },
+    {
+        "Country": "Turkmenistan",
+        "GDP_USD_billion": 59.89
+    },
+    {
+        "Country": "Uganda",
+        "GDP_USD_billion": 51.02
+    },
+    {
+        "Country": "Jordan",
+        "GDP_USD_billion": 50.81
+    },
+    {
+        "Country": "Cameroon",
+        "GDP_USD_billion": 49.28
+    },
+    {
+        "Country": "Tunisia",
+        "GDP_USD_billion": 48.54
+    },
+    {
+        "Country": "Macau",
+        "GDP_USD_billion": 45.8
+    },
+    {
+        "Country": "Bolivia",
+        "GDP_USD_billion": 45.14
+    },
+    {
+        "Country": "Bahrain",
+        "GDP_USD_billion": 44.66
+    },
+    {
+        "Country": "Libya",
+        "GDP_USD_billion": 44.03
+    },
+    {
+        "Country": "Paraguay",
+        "GDP_USD_billion": 42.96
+    },
+    {
+        "Country": "Cambodia",
+        "GDP_USD_billion": 42.82
+    },
+    {
+        "Country": "Latvia",
+        "GDP_USD_billion": 42.25
+    },
+    {
+        "Country": "Estonia",
+        "GDP_USD_billion": 41.29
+    },
+    {
+        "Country": "Nepal",
+        "GDP_USD_billion": 40.48
+    },
+    {
+        "Country": "Honduras",
+        "GDP_USD_billion": 34.4
+    },
+    {
+        "Country": "Sudan",
+        "GDP_USD_billion": 34.02
+    },
+    {
+        "Country": "El Salvador",
+        "GDP_USD_billion": 34.02
+    },
+    {
+        "Country": "Cyprus",
+        "GDP_USD_billion": 33.89
+    },
+    {
+        "Country": "Iceland",
+        "GDP_USD_billion": 31.32
+    },
+    {
+        "Country": "Papua New Guinea",
+        "GDP_USD_billion": 31.02
+    },
+    {
+        "Country": "Georgia",
+        "GDP_USD_billion": 30.54
+    },
+    {
+        "Country": "Senegal",
+        "GDP_USD_billion": 30.41
+    },
+    {
+        "Country": "Zimbabwe",
+        "GDP_USD_billion": 30.37
+    },
+    {
+        "Country": "Syria",
+        "GDP_USD_billion": 29.03
+    },
+    {
+        "Country": "Zambia",
+        "GDP_USD_billion": 27.58
+    },
+    {
+        "Country": "Bosnia and Herzegovina",
+        "GDP_USD_billion": 27.52
+    },
+    {
+        "Country": "Lebanon",
+        "GDP_USD_billion": 27.46
+    },
+    {
+        "Country": "Trinidad and Tobago",
+        "GDP_USD_billion": 25.49
+    },
+    {
+        "Country": "Armenia",
+        "GDP_USD_billion": 24.22
+    },
+    {
+        "Country": "Guinea",
+        "GDP_USD_billion": 23.01
+    },
+    {
+        "Country": "Albania",
+        "GDP_USD_billion": 22.98
+    },
+    {
+        "Country": "Malta",
+        "GDP_USD_billion": 22.21
+    },
+    {
+        "Country": "Mozambique",
+        "GDP_USD_billion": 20.95
+    },
+    {
+        "Country": "Mali",
+        "GDP_USD_billion": 20.66
+    },
+    {
+        "Country": "Burkina Faso",
+        "GDP_USD_billion": 20.32
+    },
+    {
+        "Country": "Gabon",
+        "GDP_USD_billion": 20.06
+    },
+    {
+        "Country": "Mongolia",
+        "GDP_USD_billion": 19.87
+    },
+    {
+        "Country": "Haiti",
+        "GDP_USD_billion": 19.84
+    },
+    {
+        "Country": "Benin",
+        "GDP_USD_billion": 19.67
+    },
+    {
+        "Country": "Jamaica",
+        "GDP_USD_billion": 19.42
+    },
+    {
+        "Country": "Botswana",
+        "GDP_USD_billion": 19.4
+    },
+    {
+        "Country": "Nicaragua",
+        "GDP_USD_billion": 17.83
+    },
+    {
+        "Country": "Chad",
+        "GDP_USD_billion": 17.64
+    },
+    {
+        "Country": "Palestine",
+        "GDP_USD_billion": 17.4
+    },
+    {
+        "Country": "Niger",
+        "GDP_USD_billion": 16.82
+    },
+    {
+        "Country": "Guyana",
+        "GDP_USD_billion": 16.68
+    },
+    {
+        "Country": "Moldova",
+        "GDP_USD_billion": 16.54
+    },
+    {
+        "Country": "North Korea",
+        "GDP_USD_billion": 16.45
+    },
+    {
+        "Country": "Afghanistan",
+        "GDP_USD_billion": 16.42
+    },
+    {
+        "Country": "Madagascar",
+        "GDP_USD_billion": 15.87
+    },
+    {
+        "Country": "North Macedonia",
+        "GDP_USD_billion": 15.76
+    },
+    {
+        "Country": "Brunei",
+        "GDP_USD_billion": 15.13
+    },
+    {
+        "Country": "Laos",
+        "GDP_USD_billion": 15.01
+    },
+    {
+        "Country": "Mauritius",
+        "GDP_USD_billion": 14.4
+    },
+    {
+        "Country": "Bahamas",
+        "GDP_USD_billion": 14.34
+    },
+    {
+        "Country": "Congo",
+        "GDP_USD_billion": 14.17
+    },
+    {
+        "Country": "Rwanda",
+        "GDP_USD_billion": 14.1
+    },
+    {
+        "Country": "Kyrgyzstan",
+        "GDP_USD_billion": 13.99
+    },
+    {
+        "Country": "Malawi",
+        "GDP_USD_billion": 12.63
+    },
+    {
+        "Country": "Namibia",
+        "GDP_USD_billion": 12.35
+    },
+    {
+        "Country": "Equatorial Guinea",
+        "GDP_USD_billion": 12.12
+    },
+    {
+        "Country": "Tajikistan",
+        "GDP_USD_billion": 12.06
+    },
+    {
+        "Country": "Somalia",
+        "GDP_USD_billion": 10.97
+    },
+    {
+        "Country": "Mauritania",
+        "GDP_USD_billion": 10.65
+    },
+    {
+        "Country": "Kosovo",
+        "GDP_USD_billion": 10.47
+    },
+    {
+        "Country": "New Caledonia",
+        "GDP_USD_billion": 10.14
+    },
+    {
+        "Country": "Monaco",
+        "GDP_USD_billion": 9.99
+    },
+    {
+        "Country": "Togo",
+        "GDP_USD_billion": 9.28
+    },
+    {
+        "Country": "Yemen",
+        "GDP_USD_billion": 8.76
+    },
+    {
+        "Country": "Bermuda",
+        "GDP_USD_billion": 8.14
+    },
+    {
+        "Country": "Liechtenstein",
+        "GDP_USD_billion": 7.96
+    },
+    {
+        "Country": "Montenegro",
+        "GDP_USD_billion": 7.53
+    },
+    {
+        "Country": "Cayman Islands",
+        "GDP_USD_billion": 7.13
+    },
+    {
+        "Country": "Barbados",
+        "GDP_USD_billion": 6.72
+    },
+    {
+        "Country": "Maldives",
+        "GDP_USD_billion": 6.59
+    },
+    {
+        "Country": "Sierra Leone",
+        "GDP_USD_billion": 6.41
+    },
+    {
+        "Country": "French Polynesia",
+        "GDP_USD_billion": 6.4
+    },
+    {
+        "Country": "Fiji",
+        "GDP_USD_billion": 5.44
+    },
+    {
+        "Country": "Liberia",
+        "GDP_USD_billion": 5.04
+    },
+    {
+        "Country": "South Sudan",
+        "GDP_USD_billion": 4.63
+    },
+    {
+        "Country": "Eswatini",
+        "GDP_USD_billion": 4.57
+    },
+    {
+        "Country": "Djibouti",
+        "GDP_USD_billion": 4.0
+    },
+    {
+        "Country": "Burundi",
+        "GDP_USD_billion": 3.96
+    },
+    {
+        "Country": "Andorra",
+        "GDP_USD_billion": 3.78
+    },
+    {
+        "Country": "Suriname",
+        "GDP_USD_billion": 3.76
+    },
+    {
+        "Country": "Aruba",
+        "GDP_USD_billion": 3.65
+    },
+    {
+        "Country": "Curaçao",
+        "GDP_USD_billion": 3.28
+    },
+    {
+        "Country": "Belize",
+        "GDP_USD_billion": 3.08
+    },
+    {
+        "Country": "Greenland",
+        "GDP_USD_billion": 3.04
+    },
+    {
+        "Country": "Bhutan",
+        "GDP_USD_billion": 3.02
+    },
+    {
+        "Country": "Cape Verde",
+        "GDP_USD_billion": 2.59
+    },
+    {
+        "Country": "Central African Republic",
+        "GDP_USD_billion": 2.56
+    },
+    {
+        "Country": "Zanzibar",
+        "GDP_USD_billion": 2.48
+    },
+    {
+        "Country": "Saint Lucia",
+        "GDP_USD_billion": 2.43
+    },
+    {
+        "Country": "Gambia",
+        "GDP_USD_billion": 2.4
+    },
+    {
+        "Country": "Eritrea",
+        "GDP_USD_billion": 2.28
+    },
+    {
+        "Country": "Seychelles",
+        "GDP_USD_billion": 2.14
+    },
+    {
+        "Country": "Lesotho",
+        "GDP_USD_billion": 2.12
+    },
+    {
+        "Country": "Timor-Leste",
+        "GDP_USD_billion": 2.08
+    },
+    {
+        "Country": "Antigua and Barbuda",
+        "GDP_USD_billion": 2.03
+    },
+    {
+        "Country": "San Marino",
+        "GDP_USD_billion": 1.99
+    },
+    {
+        "Country": "Guinea-Bissau",
+        "GDP_USD_billion": 1.84
+    },
+    {
+        "Country": "Sint Maarten",
+        "GDP_USD_billion": 1.68
+    },
+    {
+        "Country": "Solomon Islands",
+        "GDP_USD_billion": 1.63
+    },
+    {
+        "Country": "British Virgin Islands",
+        "GDP_USD_billion": 1.51
+    },
+    {
+        "Country": "Comoros",
+        "GDP_USD_billion": 1.45
+    },
+    {
+        "Country": "Turks and Caicos Islands",
+        "GDP_USD_billion": 1.4
+    },
+    {
+        "Country": "Grenada",
+        "GDP_USD_billion": 1.32
+    },
+    {
+        "Country": "Vanuatu",
+        "GDP_USD_billion": 1.12
+    },
+    {
+        "Country": "Saint Vincent and the Grenadines",
+        "GDP_USD_billion": 1.09
+    },
+    {
+        "Country": "Saint Kitts and Nevis",
+        "GDP_USD_billion": 1.06
+    },
+    {
+        "Country": "Samoa",
+        "GDP_USD_billion": 1.03
+    },
+    {
+        "Country": "São Tomé and Príncipe",
+        "GDP_USD_billion": 0.68
+    },
+    {
+        "Country": "Dominica",
+        "GDP_USD_billion": 0.65
+    },
+    {
+        "Country": "Tonga",
+        "GDP_USD_billion": 0.51
+    },
+    {
+        "Country": "Micronesia",
+        "GDP_USD_billion": 0.46
+    },
+    {
+        "Country": "Anguilla",
+        "GDP_USD_billion": 0.42
+    },
+    {
+        "Country": "Cook Islands",
+        "GDP_USD_billion": 0.37
+    },
+    {
+        "Country": "Kiribati",
+        "GDP_USD_billion": 0.29
+    },
+    {
+        "Country": "Palau",
+        "GDP_USD_billion": 0.28
+    },
+    {
+        "Country": "Marshall Islands",
+        "GDP_USD_billion": 0.27
+    },
+    {
+        "Country": "Nauru",
+        "GDP_USD_billion": 0.18
+    },
+    {
+        "Country": "Montserrat",
+        "GDP_USD_billion": 0.08
+    },
+    {
+        "Country": "Tuvalu",
+        "GDP_USD_billion": 0.07
+    }
+]
