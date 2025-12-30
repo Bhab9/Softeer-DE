@@ -1,8 +1,0 @@
-2025-December-30-17-21-14, INFO: Extract started
-2025-December-30-17-21-14, DEBUG: Requested page fetched
-2025-December-30-17-21-14, DEBUG: Found 7 tables
-2025-December-30-17-21-14, DEBUG: Caption - No caption
-2025-December-30-17-21-14, DEBUG: Caption - No caption
-2025-December-30-17-21-14, DEBUG: Caption - GDP forecast or estimate (million US$) by country
-2025-December-30-17-21-14, DEBUG: GDP table found
-2025-December-30-17-21-14, INFO: Extract finished
