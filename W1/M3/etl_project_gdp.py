@@ -2,6 +2,7 @@ from datetime import datetime
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+import re
 
 # logging function
 def log_message(message):
@@ -11,12 +12,13 @@ def log_message(message):
         f.write(f"{time_stamp}, {message}\n")
 
 # Extraction
-def extract_system(url: str) -> pd.DataFrame:
+def extract_system(url: str) -> Tuple[pd.DataFrame, str]:
     """
     Extract raw data from url
     Returns dataframe including:
     - Country
     - GDP
+    Returns caption: used for unit detection
     """
     log_message("INFO: Extract started")
 
@@ -38,12 +40,14 @@ def extract_system(url: str) -> pd.DataFrame:
         log_message(f"DEBUG: Found {len(tables)} tables")
     
     target_table = None
+    target_caption = ""
     for table in tables:
         caption_element = table.find("caption")
         caption = caption_element.get_text(strip=True) if caption_element else "No caption"
         log_message(f"DEBUG: Caption - {caption}")
         if caption and "GDP" in caption:
             target_table = table
+            target_caption = caption
             log_message("DEBUG: GDP table found")
             break
 
@@ -73,9 +77,52 @@ def extract_system(url: str) -> pd.DataFrame:
     df = pd.DataFrame(data, columns=["Country", "GDP"])
     log_message("INFO: Extract finished")
 
-    return df
+    return df, target_caption
+
+def transform_system(df: pd.DataFrame, caption: str) -> pd.DataFrame:
+    """
+    Transform raw data (based on unit described on caption)
+    Returns dataframe including:
+    - Country
+    - GDP
+    Transform:
+    - Country name cleaning
+    - remove NaN
+    - Convert GDP to Billion USD, float
+    - Sort by GDP descending
+    """
+    log_message("INFO: Transform started")
+
+    # Country name cleaning (remove [])
+    df['Country'] = df['Country'].apply(lambda x: re.sub(r"\[.*?\]", "", x).strip())
+
+    # remove ',' and convert to float
+    df['GDP'] = df['GDP'].str.replace(',','').str.strip()
+    # NaN data process
+    df['GDP'] = pd.to_numeric(df['GDP'], errors='coerce')
+    df = df.dropna(subset=['GDP'])
+    
+    # million to billion
+    caption_lower = caption.lower() if caption else ""
+    if "million" in caption_lower:
+        df['GDP_USD_billion'] = (df['GDP'] / 1000).round(2)
+    elif "billion" in caption_lower:
+        df['GDP_USD_billion'] = df['GDP'].round(2)
+    else:
+        df['GDP_USD_billion'] = (df['GDP'] / 1000000).round(2)
+
+    df = df.sort_values(by='GDP_USD_billion', ascending=False).reset_index(drop=True)
+    log_message("INFO: Transform finished")
+    
+    return df[['Country', 'GDP_USD_billion']]
 
 if __name__ ==  "__main__":
     url =  "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
-    df = extract_system(url)
-    print(df.head())
+    df_raw, caption = extract_system(url)
+    print("Table caption: ", caption)
+    print("Raw data prev: ")
+    print(df_raw.head())
+
+    df_transformed = transform_system(df_raw, caption)
+    print("Transformed data preview: ")
+    print(df_transformed.head())

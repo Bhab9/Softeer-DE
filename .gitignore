@@ -12,3 +12,6 @@ venv/
 
 # SQLite
 *.db
+
+# log
+etl_project_log.txt
