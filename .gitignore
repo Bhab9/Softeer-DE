@@ -3,9 +3,9 @@ __pycache__/
 *.pyc
 
 # venv
-w1m2/
 .venv/
 venv/
+w[1-9]*m[1-9]*/
 
 # Jupyter
 .ipynb_checkpoints/
