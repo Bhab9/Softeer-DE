@@ -13,7 +13,7 @@ def log_message(message):
         f.write(f"{time_stamp}, {message}\n")
 
 # Extraction
-def extract_system(url: str) -> Tuple[pd.DataFrame, str]:
+def extract_system(url: str, json_path: str):
     """
     Extract raw data from url
     Returns dataframe including:
@@ -26,7 +26,7 @@ def extract_system(url: str) -> Tuple[pd.DataFrame, str]:
     # request html of url
     # check Robot policy, User-Agent: https://www.whatismybrowser.com/detect/what-is-my-user-agent/
     headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15"
+        "User-Agent": "Mozilla/5.0"
     }
     html = requests.get(url, headers=headers).text
     log_message("DEBUG: Requested page fetched")
@@ -73,14 +73,23 @@ def extract_system(url: str) -> Tuple[pd.DataFrame, str]:
 
         # Extract IMF latest year
         gdp = cols[1].get_text(strip=True)
-        data.append([country, gdp])
+        data.append({
+            "Country": country,
+            "GDP": gdp
+        })
 
-    df = pd.DataFrame(data, columns=["Country", "GDP"])
-    log_message("INFO: Extract finished")
+    raw_json = {
+        "caption": target_caption,
+        "data": data
+    }
 
-    return df, target_caption
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(raw_json, f, ensure_ascii=False, indent=4)
 
-def transform_system(df: pd.DataFrame, caption: str) -> pd.DataFrame:
+    log_message(f"INFO: Extract finished → saved to {json_path}")
+
+
+def transform_system(raw_data: str, transform_data: str) -> pd.DataFrame:
     """
     Transform raw data (based on unit described on caption)
     Returns dataframe including:
@@ -93,6 +102,12 @@ def transform_system(df: pd.DataFrame, caption: str) -> pd.DataFrame:
     - Sort by GDP descending
     """
     log_message("INFO: Transform started")
+
+    with open(raw_data, "r", encoding="utf-8") as f:
+        raw_json = json.load(f)
+
+    caption = raw_json.get("caption", "")
+    df = pd.DataFrame(raw_json["data"])
 
     # Country name cleaning (remove [])
     df['Country'] = df['Country'].apply(lambda x: re.sub(r"\[.*?\]", "", x).strip())
@@ -117,33 +132,38 @@ def transform_system(df: pd.DataFrame, caption: str) -> pd.DataFrame:
         log_message("DEBUG: unit-none")
         df['GDP_USD_billion'] = (df['GDP'] / 1000000).round(2)
 
-    df = df.sort_values(by='GDP_USD_billion', ascending=False).reset_index(drop=True)
-    log_message("INFO: Transform finished")
-    
-    return df[['Country', 'GDP_USD_billion']]
+    output = df[["Country", "GDP_USD_billion"]].to_dict(orient="records")
+    with open(transform_data, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=4)
 
-def load_system(df: pd.DataFrame, json_path: str):
+    log_message(f"INFO: Transform finished → saved to {transform_data}")
+
+
+def load_system(prev_data: str, json_path: str):
     """
     Load data into database
     """
     log_message("INFO: Load started")
 
-    data_to_save = df.to_dict(orient="records")
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(data_to_save, f, ensure_ascii=False, indent=4)
+    ########################
+    # Todo; load prev_data
+    # use it as df
+    ########################
 
-    log_message(f"INFO: Load finished, saved to {json_path}")
+    with open(prev_data, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+    log_message(f"INFO: Load finished → saved to {json_path}")
 
 if __name__ ==  "__main__":
     url =  "https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29"
-    df_raw, caption = extract_system(url)
-    print("Table caption: ", caption)
-    print("Raw data prev: ")
-    print(df_raw.head())
-
-    df_transformed = transform_system(df_raw, caption)
-    print("Transformed data preview: ")
-    print(df_transformed.head())
-
+    raw_data = "Countries_by_GDP_raw.json"
+    transform_data = "Countries_by_GDP_trans.json"
     json_path = "Countries_by_GDP.json"
-    load_system(df_transformed, json_path)
+    
+    extract_system(url, raw_data)
+    transform_system(raw_data, transform_data)
+    load_system(transform_data, json_path)
