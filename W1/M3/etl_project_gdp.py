@@ -145,11 +145,6 @@ def load_system(prev_data: str, json_path: str):
     """
     log_message("INFO: Load started")
 
-    ########################
-    # Todo; load prev_data
-    # use it as df
-    ########################
-
     with open(prev_data, "r", encoding="utf-8") as f:
         data = json.load(f)
 
