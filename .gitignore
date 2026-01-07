@@ -6,6 +6,17 @@ __pycache__/
 .venv/
 venv/
 w[1-9]*m[1-9]*/
+w2team/
+*/w2team/
+*/venv/
+*/.venv/
+
+# exception
+!W2/
+!W2/M5/
+!W2/M5/W2M5_team/
+!W2/M5/W2M5_team/**
+!W2/M5/W2M5_team/*.csv
 
 # Jupyter
 .ipynb_checkpoints/
@@ -15,3 +26,6 @@ w[1-9]*m[1-9]*/
 
 # log
 etl_project_log.txt
+
+# csv
+*.csv
